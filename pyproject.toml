@@ -1,0 +1,33 @@
+[project]
+name = "spurious-reconstruction"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "torch==2.3.1+cu121",
+    "diffusers==0.14.0",
+    "bdpy>=0.22.1",
+    "umap-learn>=0.5.6",
+    "pandas>=2.0.3",
+    "ipykernel>=6.29.4",
+    "matplotlib>=3.7.5",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/spurious_reconstruction"]
+
+[[tool.rye.sources]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
