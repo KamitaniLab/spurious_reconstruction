@@ -123,6 +123,7 @@ markupsafe==2.1.5
     # via jinja2
     # via werkzeug
 matplotlib==3.7.5
+    # via pycocotools
     # via seaborn
     # via spurious-reconstruction
 matplotlib-inline==0.1.7
@@ -155,6 +156,7 @@ numpy==1.24.1
     # via nibabel
     # via numba
     # via pandas
+    # via pycocotools
     # via scikit-learn
     # via scipy
     # via seaborn
@@ -220,6 +222,8 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
+pycocotools==2.0.7
+    # via spurious-reconstruction
 pygments==2.18.0
     # via ipython
 pynndescent==0.5.12
