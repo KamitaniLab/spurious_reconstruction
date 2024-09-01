@@ -1,0 +1,31 @@
+image path:
+  ./data/NSD-stimuli/source
+
+image_ext:
+  png
+
+network:
+  VGG19_ILSVRC_19_layers
+
+features:
+  - features[0]   # conv1_1
+  - features[2]   # conv1_2
+  - features[5]   # conv2_1
+  - features[7]   # conv2_2
+  - features[10]  # conv3_1
+  - features[12]  # conv3_2
+  - features[14]  # conv3_3
+  - features[16]  # conv3_4
+  - features[19]  # conv4_1
+  - features[21]  # conv4_2
+  - features[23]  # conv4_3
+  - features[28]  # conv5_1
+  - features[30]  # conv5_2
+  - features[32]  # conv5_3
+  - features[34]  # conv5_4
+  - classifier[0] # fc6
+  - classifier[3] # fc7
+  - classifier[6] # fc8
+
+output base dir:
+  ./data/NSD-stimuli/features/

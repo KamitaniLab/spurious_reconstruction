@@ -1,0 +1,54 @@
+# Reconstruction configuration file
+analysis name: NSD_image_train_unave_test_ave_z_scored_500voxel_allunits_fastl2lir_alpha100_NSD_image_train_unave_test_ave_500voxel_allunits_fastl2lir_alpha1
+# Feature decoding settings ##################################################
+
+image feature decoding:
+  /home/nu/ken.shirakawa/projects/python_KS/python/share_analysis/recon-repro/diffusion_feature-decoding/image_config/TN_nsd-betasfithrfGLMdenoiseRR_testshared1000_trainnoave_testave_fastl2lir_a1_SD_1_4_feat.yaml
+  
+text feature decoding:
+  /home/nu/ken.shirakawa/projects/python_KS/python/share_analysis/recon-repro/diffusion_feature-decoding/text_config/TN_nsd-betasfithrfGLMdenoiseRR_testshared1000_trainnoave_testave_fastl2lir_a1_SD_1_4_feat.yaml
+
+# True images ################################################################
+
+true image dir:
+  #/home/nu/data/contents_shared/NSD-stimuli/source/
+  /home/nu/ken.shirakawa/projects/python_KS/python/featanalyze/Analyze_NSD/contents_shared/NSD-stimuli/source_share_test/source
+true image ext:
+  png
+
+# Subject/ROI settings for reconstruction ####################################
+recon subjects:
+  
+  - nsd-01
+
+recon image rois:
+  - streams_early
+recon text rois:
+  - streams_ventral
+
+# iCNN reconstruction ########################################################
+
+
+scale factor: # (the num of repetition)
+  1
+
+# recon icnn output dir:
+#   ./results/recon_images/Decoded_vis_image_NSD_SD_img2img
+#   # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon output dir:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/reconstruction/TN_SD_v1_4/img2img/decoded
+  # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon image ext:
+  tiff
+
+recon icnn figure dir:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/figures_tmp/reconstruction/TN_SD_v1_4/img2img/decoded
+
+
+# iCNN evaluation ########################################################
+
+recon eval encoder:
+  AlexNet
+
+recon eval device:
+  cuda:0

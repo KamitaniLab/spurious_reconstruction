@@ -1,0 +1,57 @@
+# Reconstruction configuration file
+analysis name: NSD_image_true_feature
+# Feature decoding settings ##################################################
+
+true image feature:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/features/pytorch/stable_diffusion_v1_4
+  
+true text feature:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/features/pytorch/stable_diffusion_v1_4
+# True images ################################################################
+
+true image dir:
+  /home/nu/ken.shirakawa/projects/python_KS/python/featanalyze/Analyze_NSD/contents_shared/NSD-stimuli/source_share_test/source
+true image ext:
+  png
+
+# Subject/ROI settings for reconstruction ####################################
+recon subjects:
+  - None
+
+recon image rois:
+  - None
+recon text rois:
+  - None
+
+# iCNN reconstruction ########################################################
+include test label:
+  - nsd03050
+  - nsd04836
+  - nsd05302
+  - nsd10065
+  - nsd14611
+  - nsd19201
+
+scale factor: # (the num of repetition)
+  1
+
+# recon icnn output dir:
+#   ./results/recon_images/Decoded_vis_image_NSD_SD_img2img
+#   # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon output dir:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/reconstruction/TN_SD_v1_4/img2img/true
+  # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon image ext:
+  tiff
+
+recon icnn figure dir:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/figures_tmp/reconstruction/TN_SD_v1_4/img2img/true
+
+
+# iCNN evaluation ########################################################
+
+recon eval encoder:
+  AlexNet
+
+recon eval device:
+  cuda:0

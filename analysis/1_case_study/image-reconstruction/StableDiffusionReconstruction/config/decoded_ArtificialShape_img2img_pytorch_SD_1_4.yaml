@@ -1,0 +1,52 @@
+# Reconstruction configuration file
+analysis name: deeprecon_image_train_unave_test_ave_500voxel_allunits_fastl2lir_alpha100_deeprecon_image_train_unave_test_ave_500voxel_allunits_fastl2lir_alpha100
+# Feature decoding settings ##################################################
+
+image feature decoding:
+  /home/nu/ken.shirakawa/projects/python_KS/python/share_analysis/recon-repro/diffusion_feature-decoding/image_config/ArtificialShape_from_deeprecon_fmriprep_trainnoave_testave_fastl2lir_no_voxel_select_a1_SD_1_4_feat.yaml
+  
+text feature decoding:
+  /home/nu/ken.shirakawa/projects/python_KS/python/share_analysis/recon-repro/diffusion_feature-decoding/text_config/ArtificialShape_from_deeprecon_fmriprep_trainnoave_testave_fastl2lir_no_voxel_select_a1_SD_1_4_feat.yaml
+
+# True images ################################################################
+
+true image dir:
+  /home/nu/data/contents_shared/ArtificialShapes/source
+true image ext:
+  tiff
+
+# Subject/ROI settings for reconstruction ####################################
+recon subjects:
+  - dr-01
+
+recon image rois:
+  - VC
+recon text rois:
+  - VC
+
+# iCNN reconstruction ########################################################
+
+
+scale factor: # (the num of repetition)
+  1
+
+# recon icnn output dir:
+#   ./results/recon_images/Decoded_vis_image_NSD_SD_img2img
+#   # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon output dir:
+  /home/nu/data/contents_shared/ArtificialShapes/derivatives/reconstruction/TN_SD_v1_4/img2img/decoded
+  # /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/icnn/vgg19_dgn_relu7gen_gd_200iter/decoded
+recon image ext:
+  tiff
+
+recon icnn figure dir:
+  /home/nu/data/contents_shared/ArtificialShapes/derivatives/figures_tmp/reconstruction/TN_SD_v1_4/img2img/decoded
+
+
+# iCNN evaluation ########################################################
+
+recon eval encoder:
+  AlexNet
+
+recon eval device:
+  cuda:0

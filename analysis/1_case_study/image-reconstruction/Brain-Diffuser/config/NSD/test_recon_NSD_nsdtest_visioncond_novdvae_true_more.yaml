@@ -1,0 +1,100 @@
+# Reconstruction configuration file
+
+# Feature decoding settings ##################################################
+
+feature dir: # feature decdoingではないので注意, true feature directoryを直接指定
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/features/pytorch/brain_diffuser_versatile_diffusion
+  
+# True images ################################################################
+
+true image dir:
+  /home/nu/data/contents_shared/NSD-stimuli/source
+
+true image ext:
+  png
+
+# recon_subjects, recon_roisは設定しない
+
+# Reconstruction ########################################################
+
+vd local path:
+  ./versatile_diffusion
+
+seed:
+  0
+
+#seed image dir, seed image prefix, seed image ext を設定しないと自動的にseed imageなしの再構成になる
+
+recon output dir:
+  ../../derivatives/NSD-stimuli/derivatives/reconstruction/versatile_diffusion/vd_doublecond_novdvae_pytorch_var_mix/true_50
+
+recon image ext:
+  tiff
+
+recon image prefix:
+  recon_image-
+
+recon figure dir:
+  /home/nu/data/contents_shared/NSD-stimuli/derivatives/figures/reconstruction/vdvae/vdvae_decoder_top31layers_scaled_pytorch/decoded
+
+recon eval encoder:
+  AlexNet
+
+recon targets:
+  - nsd46003
+  - nsd48618
+  - nsd44981
+  - nsd03262
+  - nsd53053
+  - nsd04931
+  - nsd06432
+  - nsd70336
+  - nsd36577
+  - nsd57047
+  - nsd07660
+  - nsd30374
+  - nsd25960
+  - nsd65415
+  - nsd42172
+  - nsd05603
+  - nsd21602
+  - nsd62303
+  - nsd05302
+  - nsd15493
+  - nsd25288
+  - nsd06559
+  - nsd16724
+  - nsd40576
+  - nsd45596
+  - nsd09918
+  - nsd26599
+  - nsd60306
+  - nsd04787
+  - nsd19182
+  - nsd72081
+  - nsd36068
+  - nsd71754
+  - nsd58145
+  - nsd11943
+  - nsd38818
+  - nsd66490
+  - nsd71233
+  - nsd03627
+  - nsd14529
+  - nsd56043
+  - nsd34239
+  - nsd14122
+  - nsd26352
+  - nsd11160
+  - nsd29838
+  - nsd48682
+  - nsd14595
+  - nsd24481
+  - nsd36975
+  - nsd36911
+
+mix cond:
+  0.0
+
+ddim step:
+  50

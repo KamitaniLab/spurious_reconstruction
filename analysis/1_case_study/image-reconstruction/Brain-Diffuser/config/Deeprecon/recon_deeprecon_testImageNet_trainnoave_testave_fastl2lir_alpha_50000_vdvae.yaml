@@ -1,0 +1,51 @@
+# Reconstruction configuration file
+
+# Feature decoding settings ##################################################
+
+feature decoding:
+  /home/nu/mtanaka/project/dnn_test/recon_repro2023/recon-repro/diffusion_feature-decoding/Brain_Diffuser/config/deeprecon_testImageNet_trainnoave_testave_fastl2lir_alpha_50000_vdvae.yaml
+  
+# True images ################################################################
+
+true image dir:
+  /home/nu/data/contents_shared/ImageNetTest/source
+
+true image ext:
+  JPEG
+
+# Subject/ROI settings for reconstruction ####################################
+
+recon subjects:
+  - dr-01
+  - dr-02
+  - dr-03
+  - dr-04
+
+recon rois:
+  - VC
+
+# VDVAE reconstruction ########################################################
+
+vdvae local path:
+  ./vdvae
+
+seed:
+  0
+
+scaled decoded feature:
+  true
+
+recon output dir:
+  /home/nu/data/contents_shared/ImageNetTest/derivatives/reconstruction/vdvae/vdvae_decoder_top31layers_scaled_pytorch/decoded
+
+recon image ext:
+  tiff
+
+recon image prefix:
+  recon_image-
+
+recon figure dir:
+  /home/nu/data/contents_shared/ImageNetTest/derivatives/figures/reconstruction/vdvae/vdvae_decoder_top31layers_scaled_pytorch/decoded
+
+recon eval encoder:
+  AlexNet
