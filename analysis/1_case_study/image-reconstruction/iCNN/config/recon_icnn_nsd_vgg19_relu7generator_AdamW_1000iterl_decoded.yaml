@@ -20,7 +20,7 @@ decoded_features:
 
 
 icnn:
-  num_iteration: 1000
+  num_iteration: 800
   feature_scaling: feature_std_train_mean_center
 
 output:

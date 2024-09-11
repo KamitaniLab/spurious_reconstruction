@@ -60,6 +60,8 @@ executing==2.0.1
     # via stack-data
 fastjsonschema==2.20.0
     # via nbformat
+fastl2lir==0.10
+    # via spurious-reconstruction
 filelock==3.13.1
     # via diffusers
     # via huggingface-hub
@@ -163,6 +165,7 @@ numpy==1.24.1
     # via bdpy
     # via contourpy
     # via diffusers
+    # via fastl2lir
     # via h5py
     # via hdf5storage
     # via matplotlib
@@ -322,6 +325,7 @@ tornado==6.4.1
     # via jupyter-client
 tqdm==4.64.1
     # via bdpy
+    # via fastl2lir
     # via huggingface-hub
     # via transformers
     # via umap-learn
