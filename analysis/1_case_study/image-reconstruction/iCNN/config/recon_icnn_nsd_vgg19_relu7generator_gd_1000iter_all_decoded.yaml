@@ -1,0 +1,50 @@
+# Reconstruction configuration file
+
+defaults:
+  - encoder: vgg19
+  - generator: relu7generator
+
+decoded_features:
+  name: NSD-stimuli
+  #path: /home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features/nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100/decoded_features/caffe/VGG_ILSVRC_19_layers
+  model_name: caffe/VGG_ILSVRC_19_layers
+  decoder_setting: nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100
+  subjects:
+    - nsd-01
+  rois:
+    - nsdgeneral
+  training_dataset: NSD-stimuli
+  #decoders:
+  #  path: /home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders/nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100/caffe/VGG_ILSVRC_19_layers
+
+
+
+icnn:
+  num_iteration: 1000
+  feature_scaling: feature_std_train_mean_center
+
+output:
+  path: ./results/reconstruction/NSD-stimuli/derivatives/reconstruction/icnn/${_analysis_name_}_${encoder.name}_${generator.name}_gd_scaling_${icnn.feature_scaling}_${icnn.num_iteration}iter/decoded/${decoded_features.name}
+  prefix: recon_image-
+  ext: tiff
+
+evaluation:
+  true_image:
+    path: ./data/NSD-stimuli/source
+    ext: png
+
+
+target_images:
+  - nsd03050
+  - nsd03435
+  - nsd05302
+  - nsd07008
+  - nsd10065
+  - nsd22264
+  - nsd37802
+  - nsd19201
+  - nsd26436
+  - nsd10007
+  - nsd21509
+  - nsd67803
+

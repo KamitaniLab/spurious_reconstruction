@@ -10,3 +10,4 @@ wheels/
 .venv
 ./results
 ./analysis/my_playground
+./data

@@ -1,0 +1,57 @@
+# @package _group_
+
+name: vgg19
+parameters_file: /home/kiss/data/models_shared/pytorch/VGG_ILSVRC_19_layers/VGG_ILSVRC_19_layers.pt
+input_image_shape: [224, 224, 3]
+
+image_mean_file: /home/kiss/data/models_shared/caffe/VGG_ILSVRC_19_layers/ilsvrc_2012_mean.npy
+feature_std_file: /home/kiss/data/models_shared/caffe/VGG_ILSVRC_19_layers/estimated_feat_std/estimated_cnn_feat_std_VGG_ILSVRC_19_layers_ImgSize_224x224_chwise_dof1.mat
+
+image_mean: [104, 117, 124] # BGR! 
+image_std: [1, 1, 1] #BGR
+
+
+layers:
+  - conv1_1
+  - conv1_2
+  - conv2_1
+  - conv2_2
+  - conv3_1
+  - conv3_2
+  - conv3_3
+  - conv3_4
+  - conv4_1
+  - conv4_2
+  - conv4_3
+  - conv4_4
+  - conv5_1
+  - conv5_2
+  - conv5_3
+  - conv5_4
+  - fc6
+  - fc7
+  - fc8
+
+layers_dict:
+  conv1_1: "features[0]"
+  conv1_2: "features[2]"
+  conv2_1: "features[5]"
+  conv2_2: "features[7]"
+  conv3_1: "features[10]"
+  conv3_2: "features[12]"
+  conv3_3: "features[14]"
+  conv3_4: "features[16]"
+  conv4_1: "features[19]"
+  conv4_2: "features[21]"
+  conv4_3: "features[23]"
+  conv4_4: "features[25]"
+  conv5_1: "features[28]"
+  conv5_2: "features[30]"
+  conv5_3: "features[32]"
+  conv5_4: "features[34]"
+  fc6: "classifier[0]" 
+  relu6: "classifier[1]"
+  fc7: "classifier[3]"
+  relu7: "classifier[4]"
+  fc8: "classifier[6]"
+  

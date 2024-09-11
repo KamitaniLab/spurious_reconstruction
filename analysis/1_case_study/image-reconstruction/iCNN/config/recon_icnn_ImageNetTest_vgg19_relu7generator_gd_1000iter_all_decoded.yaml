@@ -1,0 +1,46 @@
+# Reconstruction configuration file
+
+defaults:
+  - encoder: vgg19
+  - generator: relu7generator
+
+decoded_features:
+  name: ImageNetTest
+
+  #path: ./data/ImageNetTest/derivatives/decoded_features/deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100/decoded_features/caffe/VGG_ILSVRC_19_layers
+  #path: /home/nu/data/contents_shared/ImageNetTest/derivatives/decoded_features/deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100/decoded_features/caffe/VGG_ILSVRC_19_layers
+  model_name: caffe/VGG_ILSVRC_19_layers
+  decoder_setting: deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100
+  subjects:
+    #- Sub1
+    - TH
+  rois:
+    - VC
+  training_dataset: ImageNetTraining
+    #path: ./data/contents_shared/ImageNetTraining/derivatives/feature_decoders/deeprecon_fmriprep_rep5_trainave_500voxel_allunits_fastl2lir_alpha100/caffe/VGG_ILSVRC_19_layers 
+  #  path: /home/nu/data/contents_shared/ImageNetTraining/derivatives/feature_decoders/deeprecon_fmriprep_rep5_trainave_500voxel_allunits_fastl2lir_alpha100/caffe/VGG_ILSVRC_19_layers
+
+
+
+icnn:
+  num_iteration: 1000
+  feature_scaling: feature_std_train_mean_center
+
+output:
+  path: ./results/reconstruction/ImageNetTest/derivatives/reconstruction/icnn/${_analysis_name_}_${encoder.name}_${generator.name}_gd_scaling_${icnn.feature_scaling}_${icnn.num_iteration}iter/decoded/${decoded_features.name}
+  prefix: recon_image-
+  ext: tiff
+
+evaluation:
+  true_image:
+    path: ./data/ImageNetTest/source
+    ext: JPEG
+
+target_images:
+
+  - n01443537_22563
+  - n01858441_11077
+  - n02139199_10398
+  - n02690373_7713
+  - n03710193_22225
+  - n04252077_10859

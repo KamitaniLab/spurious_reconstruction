@@ -1,9 +1,13 @@
 image path:
-  ./data/contents_shared/ImageNetTest/source
+  ./data/ImageNetTest/source
 
 image_ext:
   JPEG
 
+output base dir:
+  ./data/ImageNetTest/derivatives/features/
+
+# This is only related to the script "iCNN_image_vgg19_feature_extraction.py"
 network:
   VGG19_ILSVRC_19_layers
 
@@ -26,6 +30,3 @@ features:
   - classifier[0] # fc6
   - classifier[3] # fc7
   - classifier[6] # fc8
-
-output base dir:
-  ./data/contents_shared/ImageNetTest/features/

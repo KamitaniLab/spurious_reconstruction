@@ -17,7 +17,7 @@ def main():
     feature_name = 'text_encoder'
     # %%
     # save dir setting
-    save_base_dir = './results'
+    save_base_dir = './results/my_playground'
     assert os.path.isdir(save_base_dir)
     save_dir = os.path.join(save_base_dir, 'res_umap', network, feature_name)
     os.makedirs(save_dir, exist_ok=True)
@@ -27,8 +27,8 @@ def main():
     # feature path setting
     feat_dir_dict= {
         # #  Generic object decoding dataset [Horikawa and Kamitani, 2017] (the same stimulus used in Deeprecon dataset [Shen et al., 2019])
-        'deeprecon-train': f'/home/nu/data/contents_shared/ImageNetTraining/derivatives/features/{network}',
-        'deeprecon-test': f'/home/nu/data/contents_shared/ImageNetTest/derivatives/features/{network}',
+        'deeprecon-train': f'./data/ImageNetTraining/derivatives/features/{network}',
+        'deeprecon-test': f'./data/ImageNetTest/derivatives/features/{network}',
         }
 
     # stimulus id path setting

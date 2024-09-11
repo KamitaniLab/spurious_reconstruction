@@ -27,15 +27,15 @@ def main():
     # feature path setting
     feat_dir_dict= {
         # NSD dataset [Allen et al, 2021]
-        'nsd-train': f'/home/nu/data/contents_shared/NSD-stimuli/derivatives/features/{network}',
-        'nsd-test':  f'/home/nu/data/contents_shared/NSD-stimuli/derivatives/features/{network}',
+        'nsd-train': f'./data/NSD-stimuli/derivatives/features/{network}',
+        'nsd-test':  f'./data/NSD-stimuli/derivatives/features/{network}',
     }
 
     # stimulus id path setting
     stim_id_dict = {
         # NSD dataset [Allen et al, 2021]
-        'nsd-train': f'/home/nu/data/contents_shared/NSD-stimuli/derivatives/nsd-analysis/nsd_stimulus_category_id_sub01_unique.csv',
-        'nsd-test':  f'/home/nu/data/contents_shared/NSD-stimuli/derivatives/nsd-analysis/nsd_stimulus_category_id_sub01_shared1000.csv',
+        'nsd-train': f'./data/NSD-stimuli/derivatives/nsd_stimulus_category_id_sub01_unique.csv',
+        'nsd-test':  f'./data/NSD-stimuli/derivatives/nsd_stimulus_category_id_sub01_shared1000.csv',
     }
 
     # Extract features using the new function

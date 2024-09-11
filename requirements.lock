@@ -11,6 +11,9 @@
 -e file:.
 ansi2html==1.9.1
     # via jupyter-dash
+antlr4-python3-runtime==4.9.3
+    # via hydra-core
+    # via omegaconf
 asttokens==2.4.1
     # via stack-data
 attrs==23.2.0
@@ -18,7 +21,7 @@ attrs==23.2.0
     # via referencing
 backcall==0.2.0
     # via ipython
-bdpy==0.22.1
+bdpy==0.24.1
     # via spurious-reconstruction
 blinker==1.8.2
     # via flask
@@ -49,6 +52,10 @@ decorator==5.1.1
     # via ipython
 diffusers==0.14.0
     # via spurious-reconstruction
+easydict==1.13
+    # via spurious-reconstruction
+einops==0.8.0
+    # via spurious-reconstruction
 executing==2.0.1
     # via stack-data
 fastjsonschema==2.20.0
@@ -76,6 +83,8 @@ huggingface-hub==0.23.3
     # via diffusers
     # via tokenizers
     # via transformers
+hydra-core==1.3.2
+    # via spurious-reconstruction
 idna==3.4
     # via requests
 importlib-metadata==7.1.0
@@ -85,6 +94,7 @@ importlib-metadata==7.1.0
     # via jupyter-client
     # via numba
 importlib-resources==6.4.0
+    # via hydra-core
     # via jsonschema
     # via jsonschema-specifications
     # via matplotlib
@@ -163,6 +173,7 @@ numpy==1.24.1
     # via scikit-learn
     # via scipy
     # via seaborn
+    # via torchvision
     # via transformers
     # via umap-learn
 nvidia-cublas-cu12==12.1.3.1
@@ -193,8 +204,12 @@ nvidia-nvjitlink-cu12==12.1.105
     # via nvidia-cusparse-cu12
 nvidia-nvtx-cu12==12.1.105
     # via torch
+omegaconf==2.3.0
+    # via hydra-core
+    # via spurious-reconstruction
 packaging==22.0
     # via huggingface-hub
+    # via hydra-core
     # via ipykernel
     # via matplotlib
     # via nibabel
@@ -213,6 +228,7 @@ pickleshare==0.7.5
 pillow==10.2.0
     # via diffusers
     # via matplotlib
+    # via torchvision
 pkgutil-resolve-name==1.3.10
     # via jsonschema
 platformdirs==4.2.2
@@ -244,6 +260,7 @@ pytz==2024.1
 pyyaml==6.0.1
     # via bdpy
     # via huggingface-hub
+    # via omegaconf
     # via transformers
 pyzmq==26.0.3
     # via ipykernel
@@ -297,10 +314,14 @@ tokenizers==0.19.1
     # via transformers
 torch==2.3.1+cu121
     # via spurious-reconstruction
+    # via torchvision
+torchvision==0.18.1+cu121
+    # via spurious-reconstruction
 tornado==6.4.1
     # via ipykernel
     # via jupyter-client
 tqdm==4.64.1
+    # via bdpy
     # via huggingface-hub
     # via transformers
     # via umap-learn
