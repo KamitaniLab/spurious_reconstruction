@@ -16,16 +16,17 @@ cd spurious_reconstruction
 rye sync
 ```
 
-## Dataset 
+## Dataset preparation
 We used the public available dataset: 
 - NSD
     - Raw fMRI data (including visual images and text annotation): upon request via https://forms.gle/eT4jHxaWwYUDEf2i9
 - Deeprecon 
-    - Raw fMRI data: Deep Image Reconstruction@OpenNeuro (https://openneuro.org/datasets/ds001506)
+    - Raw fMRI data: [Deep Image Reconstruction@OpenNeuro](https://openneuro.org/datasets/ds001506)
+    - Preprocessed fMRI data, DNN features extracted from images, and decoded DNN features: [Deep Image Reconstruction@figshare](https://github.com/KamitaniLab/DeepImageReconstruction?tab=readme-ov-file#:~:text=Preprocessed%20fMRI%20data,Image%20Reconstruction%40figshare)
     - Visual images: upon requeset via https://forms.gle/ujvA34948Xg49jdn9 
     - Text annotation: https://github.com/KamitaniLab/GOD_stimuli_annotations 
 
-Alternatively, you can use the following commands to download specific data. The data will be automatically extracted and organized into the designated directory:
+You can also use the following commands to download specific data. The data will be automatically extracted and organized into the designated directory:
 
 
 ## Usage

@@ -311,7 +311,7 @@ def run_icnn_reconstruction(config):
         for idx, ((true_image, stimulus_names), decoded_features) in enumerate(
                 data_loader
             ):
-            print(idx)
+            print(stimulus_names)
             pipeline.reset_states()
             target_features = {
                 k: v.to(device=device, dtype=dtype) for k, v in decoded_features.items()

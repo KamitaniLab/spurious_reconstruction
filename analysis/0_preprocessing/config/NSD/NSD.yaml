@@ -23,6 +23,7 @@ features:
   - features[19]  # conv4_1
   - features[21]  # conv4_2
   - features[23]  # conv4_3
+  - features[25]  # conv4_4
   - features[28]  # conv5_1
   - features[30]  # conv5_2
   - features[32]  # conv5_3
