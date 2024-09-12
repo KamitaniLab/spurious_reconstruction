@@ -140,8 +140,9 @@ def run_layerwise_recovery_check(cfg):
 
     # set up features
     data_root_path = Path("./data") / cfg.dataset.name
+
     feature_root_path = (
-        Path("/home/nu/data/contents_shared")/  cfg.dataset.name / "derivatives" / "features" / "caffe/VGG_ILSVRC_19_layers"
+        Path("./data")/  cfg.dataset.name / "derivatives" / "features" / "caffe/VGG_ILSVRC_19_layers"
     )
     #assets_root_path = Path(f"./results/recovery_check/{cfg.dataset.name}")
     assert_root_path = assets_root_path = Path(f"{cfg.output.path}")

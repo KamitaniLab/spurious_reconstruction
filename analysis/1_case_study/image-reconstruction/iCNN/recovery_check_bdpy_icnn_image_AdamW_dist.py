@@ -208,7 +208,7 @@ def run_icnn_reconstruction(config):
     # %%
     data_root_path = Path("./data") / cfg.decoded_features.name
     feature_root_path = (
-        Path("/home/nu/data/contents_shared")/ cfg.decoded_features.name / "derivatives" / "features" / cfg.decoded_features.model_name
+        Path("./data")/ cfg.decoded_features.name / "derivatives" / "features" / cfg.decoded_features.model_name
     )
     
 

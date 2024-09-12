@@ -12,7 +12,7 @@ decoded_features:
   decoder_setting: deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100
 
   subjects:
-    - TH
+    - sub01
   rois:
     - VC
   training_dataset: ImageNetTraining

@@ -10,7 +10,6 @@ import random
 import matplotlib
 import random
 
-#load_base_dir = '/home/nu/data/contents_shared/NSD-stimuli/derivatives/umap/cos_sim'
 load_base_dir = './results/res_umap'
 assert os.path.isdir(load_base_dir)
 save_base_dir = './results/assets/figS03'

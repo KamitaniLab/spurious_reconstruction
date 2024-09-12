@@ -52,7 +52,7 @@ def extract_Deeprecon_CLIP_text_features():
     
         
 def Deeprecon_test_setting():
-    original_DeepreconTest_dir = '/home/nu/data/contents_shared/ImageNetTest'
+    original_DeepreconTest_dir = './data/ImageNetTest'
     image_list = glob(os.path.join(original_DeepreconTest_dir, 'source', '*.JPEG'))
     # we didn't share the test annotation file due to the possibility to traing the future AI models.
     df = pd.read_csv(os.path.join(original_DeepreconTest_dir, 'derivatives/captions/amt_20181204/amt_20181204.csv'))
@@ -60,7 +60,7 @@ def Deeprecon_test_setting():
     return image_list, df, save_base_path
     
 def Deeprecon_training_setting():
-    original_DeepreconTraining_dir = '/home/nu/data/contents_shared/ImageNetTraining'
+    original_DeepreconTraining_dir = './data/contents_shared/ImageNetTraining'
     image_list = glob(os.path.join(original_DeepreconTraining_dir, 'source', '*.JPEG'))
     df = pd.read_csv(os.path.join(original_DeepreconTraining_dir, 'derivatives/captions/amt_20181204/amt_20181204.csv'))
     save_base_path = "./data/ImageNetTraining/derivatives/features"
