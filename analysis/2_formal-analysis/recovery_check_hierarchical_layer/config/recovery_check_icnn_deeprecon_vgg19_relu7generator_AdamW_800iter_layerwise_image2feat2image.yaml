@@ -1,0 +1,29 @@
+# Reconstruction configuration file
+# version https://github.com/KamitaniLab/bdpy/tree/f67228e64c7b4fa8877234d2b9c4822fcb6ed069 
+
+defaults:
+  - encoder: vgg19
+  - generator: relu7generator
+
+dataset:
+  name: ImageNetTest
+
+feature_inversion:
+  num_iteration: 800
+
+output:
+  path: ./results/recovery_check/${_analysis_name_}_${dataset.name}_${encoder.name}_relu7generator_AdamW_${feature_inversion.num_iteration}iter/layerwise/
+  prefix: recon_image-
+  ext: tiff
+
+true_image:
+  path: ./data/ImageNetTest/source
+  ext: JPEG
+
+
+target_images:
+  - n01443537_22563
+  - n01677366_18182
+  - n01943899_24131
+  - n02690373_7713
+  - n03710193_22225

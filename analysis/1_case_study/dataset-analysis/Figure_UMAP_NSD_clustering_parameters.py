@@ -45,3 +45,5 @@ os.makedirs(save_dir, exist_ok=True)
 #fig.savefig(os.path.join(save_base_dir, file_name.replace("npy", "pdf")))
 
 #fig.savefig(os.path.join(save_base_dir, file_name.replace("npy", "png")), dpi=600)
+
+# %%

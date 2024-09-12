@@ -10,3 +10,6 @@ If you want to extract CLIP text (for Brain-Diffuser) in the Deeprecon dataset, 
 If you want to extract CLIP vision (for Brain-Diffuser) in the NSD dataset, running this command:
 ```rye run python ./analysis/0_preprocessing/BD_extract_CLIP_vision_feature.py  ./analysis/0_preprocessing/config/NSD/NSD.yaml``` 
 
+Note:
+If you want to extract CLIP features used in the Brain-Diffuser models, you need additonaly prepare[versatile_diffusion](https://github.com/ozcelikfu/brain-diffuser/tree/main/versatile_diffusion) at the top of this directory. 
+

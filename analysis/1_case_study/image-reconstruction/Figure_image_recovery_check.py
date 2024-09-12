@@ -235,7 +235,7 @@ img = draw_group_image_set(
               
             )
 
-#img.save(f'{save_dir}/recovery_check_Deeprecon_selected.pdf')
+img.save(f'{save_dir}/recovery_check_Deeprecon_selected.pdf')
 
 
 
