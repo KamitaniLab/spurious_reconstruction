@@ -1,0 +1,52 @@
+analysis name: nsd-betasfithrfGLMdenoiseRR_trainnoave_testave_fastl2lir_alpha_100000
+
+# This is the same as the Brain diffusers paper.
+training fmri:
+  nsd-01:
+    - ./data/fmri_data/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_unique.h5
+
+    #- /home/nu/data/fmri_shared/datasets/NSD/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_unique.h5
+  # sub-05:
+
+  # sub-07:
+
+test fmri:
+  nsd-01:
+    - ./data/fmri_data/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_shared1000.h5
+    #- /home/nu/data/fmri_shared/datasets/NSD/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_shared1000.h5
+
+rois:
+  NSDgeneral: ROI_lh.nsdgeneral_nsdgeneral + ROI_rh.nsdgeneral_nsdgeneral
+
+rois voxel num:
+  NSDgeneral: 0
+
+label key:
+  stimulus_name
+
+# DNN features
+training feature dir:
+  - ./data/NSD-stimuli/derivatives/features/
+
+test feature dir:
+  - ./data/NSD-stimuli/derivatives/features/
+
+network:
+  pytorch/brain_diffuser_versatile_diffusion
+ 
+layers:
+  - vision_encoder
+  - text_encoder
+
+# Feature decoders
+feature decoder dir:
+  ./data/NSD-stimuli/derivatives/feature_decoders
+  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders
+
+# Decoded features
+decoded feature dir:
+  ./data/NSD-stimuli/derivatives/decoded_features
+  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features
+# Learning parameters
+alpha: 100000
+chunk axis: 1

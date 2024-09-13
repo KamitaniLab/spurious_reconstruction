@@ -1,0 +1,83 @@
+analysis name: nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100
+
+# fMRI data ##################################################################
+
+training fmri:
+  nsd-01:
+    - ./data/fmri_data/datasets/NSD/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_unique.h5
+
+  #   - /home/kiss/data/fmri_shared/datasets/NSD/nsd-37ses_sub-02_fmriprep_preproc_shift2vol_avequivol_unique.h5
+  # sub-05:
+
+  # sub-07:
+
+test fmri:
+  nsd-01:
+    - ./data/fmri_data/datasets/NSD/nsd-37ses_sub-01_func1pt8mm_betas_fithrf_GLMdenoise_RR_roifixed_20230425_shared1000.h5
+  # sub-02:
+  #   - /home/kiss/data/fmri_shared/datasets/NSD/nsd-37ses_sub-02_fmriprep_preproc_shift2vol_avequivol_shared1000.h5
+
+rois:
+  #WholeVC:    ROI_HCP_MMP1_WholeVC
+  nsdgeneral: ROI_lh.nsdgeneral_nsdgeneral + ROI_rh.nsdgeneral_nsdgeneral
+
+# The number of voxels used in feature decoding
+rois voxel num:
+  WholeVC:    500
+  nsdgeneral: 500
+
+label key:
+  stimulus_name
+
+# DNN features ###############################################################
+
+training feature dir:
+  - ./data/NSD-stimuli/derivatives/features
+
+test feature dir:
+  - ./data/NSD-stimuli/derivatives/features
+
+network:
+  caffe/VGG_ILSVRC_19_layers
+
+layers:
+  - conv1_1
+  - conv1_2
+  - conv2_1
+  - conv2_2
+  - conv3_1
+  - conv3_2
+  - conv3_3
+  - conv3_4
+  - conv4_1
+  - conv4_2
+  - conv4_3
+  - conv4_4
+  - conv5_1
+  - conv5_2
+  - conv5_3
+  - conv5_4
+  - fc6
+  - fc7
+  - fc8
+
+# Feature decoding ###########################################################
+
+feature decoder dir:
+  ./data/NSD-stimuli/derivatives/feature_decoders
+  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders
+
+# Decoded features
+decoded feature dir:
+  ./data/NSD-stimuli/derivatives/decoded_features
+  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features
+
+test single trial: false
+  
+# Learning parameters
+alpha: 100
+chunk axis: 1
+
+# Figure output
+decoding figure dir:
+  ./data/NSD-stimuli/derivatives/figures/feature_decoding

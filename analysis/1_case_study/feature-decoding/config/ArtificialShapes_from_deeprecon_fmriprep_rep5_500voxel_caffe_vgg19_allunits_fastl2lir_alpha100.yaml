@@ -1,0 +1,65 @@
+analysis name: deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100
+
+# fMRI data
+training fmri:
+  sub01:
+  - ./data/fmri_data/sub01_ImageNetTraining_volume_native.h5 
+
+test fmri:
+  sub01:
+    - ./data/fmri_data/sub01_ImageNetTest_volume_native.h5
+  
+rois:
+  VC:  ROI_VC = 1
+
+rois voxel num:
+  VC:  500
+
+label key:
+  stimulus_name
+
+# DNN features
+training feature dir:
+  - ./data/ImageNetTraining/derivatives/features
+
+test feature dir:
+  - ./data/ArtificialShapes/derivatives/features
+
+network:
+  caffe/VGG_ILSVRC_19_layers
+
+layers:
+   - conv1_1
+   - conv1_2
+   - conv2_1
+   - conv2_2
+   - conv3_1
+   - conv3_2
+   - conv3_3
+   - conv3_4
+   - conv4_1
+   - conv4_2
+   - conv4_3
+   - conv4_4
+   - conv5_1
+   - conv5_2
+   - conv5_3
+   - conv5_4
+   - fc6
+   - fc7
+   - fc8
+   #- relu6
+   #- relu7
+
+# Feature decoders
+feature decoder dir:
+  ./data/ImageNetTraining/derivatives/feature_decoders
+
+# Decoded features
+decoded feature dir:
+  ./data/contents_shared/ArtificialShapes/derivatives/decoded_features
+# Learning parameters
+alpha: 100
+chunk axis: 1
+
+save_training_decoded_feat: 1

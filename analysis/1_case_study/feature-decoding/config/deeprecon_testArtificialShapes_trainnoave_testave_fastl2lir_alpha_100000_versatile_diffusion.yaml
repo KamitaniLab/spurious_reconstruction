@@ -1,0 +1,45 @@
+analysis name: deeprecon_testArtificialShapes_trainnoave_testave_fastl2lir_alpha_100000
+
+# fMRI data
+training fmri:
+  sub01:
+    - ./data/fmri_data/sub01_ImageNetTraining_volume_native.h5
+
+test fmri:
+  sub01:
+    - ./data/fmri_data/sub01_ArtificialShapes_volume_native.h5
+
+rois:
+  VC: ROI_VC = 1
+
+rois voxel num:
+  VC: 0
+
+label key:
+  stimulus_name
+
+# DNN features
+training feature dir:
+  - ./data/ImageNetTraining/derivatives/features
+
+test feature dir:
+  - ./data/ArtificialShapes/derivatives/features
+
+network:
+  pytorch/brain_diffuser_versatile_diffusion
+
+layers:
+  - vision_encoder
+  - text_encoder
+  
+# Feature decoders
+feature decoder dir:
+  ./data/ImageNetTraining/derivatives/feature_decoders
+
+# Decoded features
+decoded feature dir:
+  ./data/ArtificialShapes/derivatives/decoded_features
+
+# Learning parameters
+alpha: 100000
+chunk axis: 1
