@@ -236,14 +236,12 @@ def run_icnn_reconstruction(config):
 
     # %%
     data_root_path = Path("./data") / cfg.decoded_features.name
-    #feature_root_path = (
-    #    Path("/home/nu/data/contents_shared")/ cfg.decoded_features.name / "derivatives" / "features" / cfg.decoded_features.model_name
-    #)
+    
     feature_root_path = (
         Path("./data")/ cfg.decoded_features.name / "derivatives" / "features" / cfg.decoded_features.model_name
     )
     decoded_feature_root_path = (
-        #Path("/home/nu/data/contents_shared") / cfg.decoded_features.name
+        
         Path("./data") / cfg.decoded_features.name
         / "derivatives"
         / "decoded_features"
@@ -256,7 +254,6 @@ def run_icnn_reconstruction(config):
     # Load target statistics
     print("Load target statistics")
     target_path_template = (
-        #f"/home/nu/data/contents_shared/{cfg.decoded_features.training_dataset}/derivatives"
         f"./data/{cfg.decoded_features.training_dataset}/derivatives"
         f"/feature_decoders/{cfg.decoded_features.decoder_setting}/{cfg.decoded_features.model_name}"
         "/{layer_path_name}"

@@ -6,7 +6,7 @@ defaults:
 
 decoded_features:
   name: NSD-stimuli
-  #path: /home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features/nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100/decoded_features/caffe/VGG_ILSVRC_19_layers
+
   model_name: caffe/VGG_ILSVRC_19_layers
   decoder_setting: nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100
   subjects:
@@ -15,7 +15,6 @@ decoded_features:
     - nsdgeneral
   training_dataset: NSD-stimuli
   #decoders:
-  #  path: /home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders/nsd-37ses_func1pt8mm_betas_fithrf_GLMdenoise_RR_testshared1000_trainnoave_testave_fastl2lir_a100/caffe/VGG_ILSVRC_19_layers
 
 
 

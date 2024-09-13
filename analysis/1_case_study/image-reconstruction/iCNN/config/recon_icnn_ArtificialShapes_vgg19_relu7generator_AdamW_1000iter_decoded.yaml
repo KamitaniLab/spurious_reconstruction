@@ -7,7 +7,6 @@ defaults:
 decoded_features:
   name: ArtificialShapes
 
-  #path: /home/nu/data/contents_shared/ArtificialShapes/derivatives/decoded_features/deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100/decoded_features/caffe/VGG_ILSVRC_19_layers
   model_name: caffe/VGG_ILSVRC_19_layers
   decoder_setting: deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100
 
@@ -16,8 +15,6 @@ decoded_features:
   rois:
     - VC
   training_dataset: ImageNetTraining
-  #decoders:
-  #  path: /home/nu/data/contents_shared/ImageNetTraining/derivatives/feature_decoders/deeprecon_fmriprep_rep5_trainave_500voxel_allunits_fastl2lir_alpha100/caffe/VGG_ILSVRC_19_layers
 
 
 

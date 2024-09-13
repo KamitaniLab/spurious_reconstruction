@@ -68,7 +68,6 @@ def extract_CLIP_vision_features(config):
 
     data_path = config['image path']
     # %%
-    #data_path = '/home/nu/data/contents_shared/NSD-stimuli/source'
     image_data = batch_generator_external_image_files(data_path)
     data_loader = DataLoader(image_data,batch_size,shuffle=False)
     # %%

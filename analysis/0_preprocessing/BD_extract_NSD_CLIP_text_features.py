@@ -33,7 +33,7 @@ def extract_NSD_CLIP_text_features():
     # %%
     num_embed, num_features = 77, 768
 
-    origina_nsd_dir = '/home/nu/data/fmri_shared/public/NSD/latest/'
+    origina_nsd_dir = '[PATH_TO_NSD_DATASET_DIR]' #'/home/nu/data/fmri_shared/public/NSD/latest/'
     nsda = NSDAccess(origina_nsd_dir)
 
     output_dir = os.path.join("./data/NSD-stimuli/derivatives/features/", "pytorch", 'brain_diffuser_versatile_diffusion')

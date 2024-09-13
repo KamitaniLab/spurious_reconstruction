@@ -8,7 +8,7 @@ decoded_features:
   name: ImageNetTest
 
   #path: ./data/ImageNetTest/derivatives/decoded_features/deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100/decoded_features/caffe/VGG_ILSVRC_19_layers
-  #path: /home/nu/data/contents_shared/ImageNetTest/derivatives/decoded_features/deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100/decoded_features/caffe/VGG_ILSVRC_19_layers
+
   model_name: caffe/VGG_ILSVRC_19_layers
   decoder_setting: deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100
   subjects:
@@ -17,8 +17,6 @@ decoded_features:
   rois:
     - VC
   training_dataset: ImageNetTraining
-    #path: ./data/contents_shared/ImageNetTraining/derivatives/feature_decoders/deeprecon_fmriprep_rep5_trainave_500voxel_allunits_fastl2lir_alpha100/caffe/VGG_ILSVRC_19_layers 
-  #  path: /home/nu/data/contents_shared/ImageNetTraining/derivatives/feature_decoders/deeprecon_fmriprep_rep5_trainave_500voxel_allunits_fastl2lir_alpha100/caffe/VGG_ILSVRC_19_layers
 
 
 

@@ -65,12 +65,12 @@ layers:
 
 feature decoder dir:
   ./data/NSD-stimuli/derivatives/feature_decoders
-  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders
+  
 
 # Decoded features
 decoded feature dir:
   ./data/NSD-stimuli/derivatives/decoded_features
-  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features
+  
 
 test single trial: false
   

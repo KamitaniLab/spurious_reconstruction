@@ -41,12 +41,11 @@ layers:
 # Feature decoders
 feature decoder dir:
   ./data/NSD-stimuli/derivatives/feature_decoders
-  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/feature_decoders
 
 # Decoded features
 decoded feature dir:
   ./data/NSD-stimuli/derivatives/decoded_features
-  #/home/nu/data/contents_shared/NSD-stimuli/derivatives/decoded_features
+
 # Learning parameters
 alpha: 100000
 chunk axis: 1
