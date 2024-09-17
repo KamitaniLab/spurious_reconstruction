@@ -33,3 +33,19 @@ You can also use the following commands to download specific data. The data will
 ---
 
 We are currently preparing to share the preprocessed data and files. These files will be available at Figshare https://doi.org/10.6084/m9.figshare.27013342
+
+
+Since reproducing all of the analysis needs a huge data files (~3T storages) and some analyze take long time to finish (~ 2 weeks), we recommend use download scritps to download minimum files to reproduce a specific task such as image reconstruction, simulation analysis etc.. 
+
+If you want to reprodue the UMAP results, you can download the data by:
+
+You can running `download.py` with specific argument such as 
+```
+python ./download.py "UMAP visualization analysis" # Related to Figure 4
+```
+Alternatively, you also get the results directly, running by:
+```
+python ./download.py "UMAP visualization results" # Related to Figure 4
+```
+
+Each analysis directory provide more information to reproduce the results.
