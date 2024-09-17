@@ -1,7 +1,6 @@
 # Spurious-reconstruction
 
-Demo code for Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani "Spurious reconstruction from brain activity
-" ([arXiv](https://arxiv.org/abs/2405.10078)).
+Demo code for Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani "Spurious reconstruction from brain activity" ([arXiv](https://arxiv.org/abs/2405.10078)).
 
 ## Getting Started
 
