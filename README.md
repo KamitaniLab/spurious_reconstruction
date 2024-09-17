@@ -1,51 +1,58 @@
 # Spurious-reconstruction
 
-Demo code for Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani "Spurious reconstruction from brain activity" ([arXiv](https://arxiv.org/abs/2405.10078)).
+This repository contains demo code for the paper:  
+Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani, "Spurious reconstruction from brain activity" ([arXiv](https://arxiv.org/abs/2405.10078)).
 
 ## Getting Started
 
-### Instration
-Clone the reposibory on your local machine, using git clone by pasting the URL of this project:
+### Installation
+To clone this repository on your local machine, use the following `git clone` command with the project URL:
 
-`git clone https://github.com/KamitaniLab/spurious_reconstruction.git`
-### Build environment
-We created the environment by rye. You can install rye by [the official instruction](https://rye.astral.sh/).
-After installing rye, you can sync this repository
+
+``` 
+git clone https://github.com/KamitaniLab/spurious_reconstruction.git
 ```
-cd spurious_reconstruction
+### Environment Setup
+The environment for this project was created using [Rye](https://rye.astral.sh/). To set it up, follow the official instructions to install Rye. After installation, you can synchronize the environment for this repository using:
+
+```
+cd spurious_reconstruction 
 rye sync
 ```
 
-### Dataset preparation
-We used the public available dataset: 
-- NSD
-    - Raw fMRI data (including visual images and text annotation): upon request via https://forms.gle/eT4jHxaWwYUDEf2i9
-- Deeprecon 
-    - Raw fMRI data: [Deep Image Reconstruction@OpenNeuro](https://openneuro.org/datasets/ds001506)
-    - Preprocessed fMRI data, DNN features extracted from images, and decoded DNN features: [Deep Image Reconstruction@figshare](https://github.com/KamitaniLab/DeepImageReconstruction?tab=readme-ov-file#:~:text=Preprocessed%20fMRI%20data,Image%20Reconstruction%40figshare)
-    - Visual images: upon requeset via https://forms.gle/ujvA34948Xg49jdn9 
-    - Text annotation: https://github.com/KamitaniLab/GOD_stimuli_annotations 
+### Dataset
+We used publicly available datasets for this project. The key datasets are:
 
-You can also use the following commands to download specific data. The data will be automatically extracted and organized into the designated directory:
+- **NSD (Natural Scenes Dataset)**  
+    - Raw fMRI data (including visual images and text annotations): Available upon request via [this form](https://forms.gle/eT4jHxaWwYUDEf2i9).
+  
+- **Deep Image Reconstruction**  
+    - Raw fMRI data: Available from [OpenNeuro](https://openneuro.org/datasets/ds001506).
+    - Preprocessed fMRI data, DNN features extracted from images, and decoded DNN features: Available via [Deep Image Reconstruction@figshare](https://github.com/KamitaniLab/DeepImageReconstruction?tab=readme-ov-file#:~:text=Preprocessed%20fMRI%20data,Image%20Reconstruction%40figshare).
+    - Visual images: Available upon request via [this form](https://forms.gle/ujvA34948Xg49jdn9).
+    - Text annotations: Available from [GOD Stimuli Annotations](https://github.com/KamitaniLab/GOD_stimuli_annotations).
 
+If you want to fully reproduce the analysis, you can use these brain data and image stimuli.
 
 ## Usage
+
 ---
 
-We are currently preparing to share the preprocessed data and files. These files will be available at Figshare https://doi.org/10.6084/m9.figshare.27013342
+We are currently preparing to share the preprocessed data and files. These files will be made available on Figshare at [this DOI](https://doi.org/10.6084/m9.figshare.27013342).
 
+Reproducing the full analysis requires a large amount of data (approximately 3TB) and some analyses take considerable time to complete (up to ~2 weeks). Therefore, we recommend downloading only the minimum necessary files to reproduce specific analysis, such as image reconstruction, UMAP results or simulation analysis.
 
-Since reproducing all of the analysis needs a huge data files (\~3T storages) and some analyze take long time to finish (\~ 2 weeks), we recommend use download scritps to download minimum files to reproduce a specific task such as image reconstruction, simulation analysis etc.. 
+For example, if you want to reproduce the UMAP results (related to Figure 4), you can download the required data by running the following command:
 
-If you want to reprodue the UMAP results, for example,  you can download the data by:
-
-You can running `download.py` with specific argument such as 
 ```
-python ./download.py "UMAP visualization analysis" # Related to Figure 4
-```
-Alternatively, you also get the results directly, running by:
-```
-python ./download.py "UMAP visualization results" # Related to Figure 4
+python ./download.py "UMAP visualization analysis"
 ```
 
-Each analysis directory provide more information to reproduce the results.
+Alternatively, you can directly download the results of UMAP analysis with:
+```
+python ./download.py "UMAP visualization results"
+```
+
+
+Each analysis directory contains additional information on how to reproduce the corresponding results. Please check the README files within each directory for specific instructions.
+
