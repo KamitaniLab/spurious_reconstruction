@@ -232,12 +232,15 @@ if __name__ == '__main__':
         single_trial = conf['test single trial']
     else:
         single_trial = False
-
+    save_base_dir = f'./results/pairwise_identification/{analysis_name}'
+    os.makedirs(save_base_dir, exist_ok=True)
     featdec_cv_eval(
         decoded_feature_dir,
         os.path.join(conf['feature dir'][0], conf['network']),
-        output_file_pooled=os.path.join(decoded_feature_dir, 'accuracy.pkl.gz'),
-        output_file_fold=os.path.join(decoded_feature_dir, 'accuracy_fold.pkl.gz'),
+        #output_file_pooled=os.path.join(decoded_feature_dir, 'accuracy.pkl.gz'),
+        #output_file_fold=os.path.join(decoded_feature_dir, 'accuracy_fold.pkl.gz'),
+        output_file_pooled=os.path.join(save_base_dir, 'accuracy.pkl.gz'),
+        output_file_fold=os.path.join(save_base_dir, 'accuracy_fold.pkl.gz'),
         subjects=list(conf['fmri'].keys()),
         rois=list(conf['rois'].keys()),
         features=conf['layers'],

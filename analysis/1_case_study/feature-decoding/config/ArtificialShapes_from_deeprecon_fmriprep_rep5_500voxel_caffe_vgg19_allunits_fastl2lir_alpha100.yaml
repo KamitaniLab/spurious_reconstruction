@@ -57,7 +57,7 @@ feature decoder dir:
 
 # Decoded features
 decoded feature dir:
-  ./data/contents_shared/ArtificialShapes/derivatives/decoded_features
+  ./data/ArtificialShapes/derivatives/decoded_features
 # Learning parameters
 alpha: 100
 chunk axis: 1

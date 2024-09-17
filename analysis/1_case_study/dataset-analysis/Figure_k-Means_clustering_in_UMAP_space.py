@@ -61,7 +61,7 @@ ax.set_ylim(-15, 30)
 
 save_dir = save_base_dir
 os.makedirs(save_dir, exist_ok=True)
-#fig.savefig(os.path.join(save_base_dir, 'kmeans_cluster.pdf'))
+fig.savefig(os.path.join(save_base_dir, 'kmeans_cluster.pdf'))
 
 
 # %%

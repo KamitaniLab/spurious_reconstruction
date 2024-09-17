@@ -293,12 +293,14 @@ if __name__ == '__main__':
     else:
         single_trial = False
 
+    save_base_dir = f'./results/cluster_identification/{analysis_name}'
+    os.makedirs(save_base_dir, exist_ok=True)
     decfeat_cv_eval_sim_cluster_iden(
         scaled_decoded_feature_dir,
         cluster_ave_feature_dir, 
         os.path.join(conf['feature dir'][0], conf['network']),
-        output_file_pooled=os.path.join(scaled_decoded_feature_dir, f'sim_cluster_accuracy_classification.pkl.gz'),
-        output_file_fold=os.path.join(scaled_decoded_feature_dir, f'sim_cluster_accuracy_fold_classification.pkl.gz'),
+        output_file_pooled=os.path.join(save_base_dir, f'sim_cluster_accuracy_classification.pkl.gz'),
+        output_file_fold=os.path.join(save_base_dir, f'sim_cluster_accuracy_fold_classification.pkl.gz'),
         subjects=list(conf['fmri'].keys()),
         rois=list(conf['rois'].keys()),
         features=conf['layers'],

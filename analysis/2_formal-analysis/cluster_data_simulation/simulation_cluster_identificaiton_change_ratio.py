@@ -353,7 +353,7 @@ def main():
         # Perform simulation: training the decoder model)
 
     # save 
-    save_dir = f'./results/cluster_identification_ratio/'
+    save_dir = f'./results/simulation_cluster_identification_ratio/'
     os.makedirs(save_dir, exist_ok=True)
     with open(f'{save_dir}/cluster_identifiction_change_intra_inter_ratio.pkl', 'wb') as f:
         pickle.dump(save_dict, f)

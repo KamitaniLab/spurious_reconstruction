@@ -17,7 +17,7 @@ def main():
     feature_name = 'text_encoder'
     # %%
     # save dir setting
-    save_base_dir = './results/my_playground'
+    save_base_dir = './results/'
     assert os.path.isdir(save_base_dir)
     save_dir = os.path.join(save_base_dir, 'res_umap', network, feature_name)
     os.makedirs(save_dir, exist_ok=True)

@@ -15,7 +15,7 @@ dim = 512
 inner_intra_ratio_list = [0.01, 0.1, 0.5, 1.0, 5.0, 10, 50, 100]
 
 # load results 
-load_dir = './results/cluster_identification_ratio/'
+load_dir = './results/simulation_cluster_identification_ratio/'
     
 
 color_dict = {

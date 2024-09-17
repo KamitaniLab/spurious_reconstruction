@@ -280,39 +280,46 @@ def run_icnn_reconstruction(config):
 
         return _compose
 
-    images_dataset = ImageDataset(
-            root_path=data_root_path / "source",
-            extension=cfg.evaluation.true_image.ext,
-        stimulus_names=cfg.target_images,
+    #images_dataset = ImageDataset(
+    #        root_path=data_root_path / "source",
+    #        extension=cfg.evaluation.true_image.ext,
+    #    stimulus_names=cfg.target_images,
 
-        )
-
+    #    )
+    target_images = np.array(cfg.target_images)
     for subject, roi in product(cfg.decoded_features.subjects, cfg.decoded_features.rois):
+       
+        
         decoded_features_dataset = DecodedFeaturesDataset(
             root_path=decoded_feature_root_path,
             layer_path_names=list(to_layer_name.keys()),
             subject_id=subject,
             roi=roi,
-            stimulus_names=images_dataset._stimulus_names,
+            #timulus_names=images_dataset._stimulus_names,
+            stimulus_names=target_images,
             transform=compose(
                 ScaleFeatures(target_center, target_scale),
                 RenameFeatureKeys(to_layer_name),
             ),
         )
         # %%
-        stacked_dataset = SimpleStackDataset(
-                images_dataset, decoded_features_dataset
-            )
+        #stacked_dataset = SimpleStackDataset(
+        #        images_dataset, decoded_features_dataset
+        #    )
+       
 
         data_loader = DataLoader(
-                stacked_dataset,
+                decoded_features_dataset,
                 batch_size=batch_size,
                 num_workers=1,
             )
         # %%
-        for idx, ((true_image, stimulus_names), decoded_features) in enumerate(
+        for idx,  decoded_features in enumerate(
                 data_loader
             ):
+            stimulus_names = cfg.target_images[idx]
+            if type(stimulus_names) is str:
+                stimulus_names = stimulus_names,
             print(stimulus_names)
             pipeline.reset_states()
             target_features = {

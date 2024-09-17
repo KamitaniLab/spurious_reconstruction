@@ -45,7 +45,7 @@ num_inner_clusters_list = np.array([2, 4, 8, 16, 32, 64, 128, 256, 512, 1024,
 dim_list = [2, 4, 8, 16, 32 , 64 ,128, 256, 512, 1024, 2048, 4096, 8192 ]
 # %%
 # load results 
-load_dir = './results/cluster_identification_dim/'
+load_dir = './results/simulation_cluster_identification_dim/'
 assert os.path.isdir(load_dir)
 
 ratio_list = [0.1, 0.01, 0.5]

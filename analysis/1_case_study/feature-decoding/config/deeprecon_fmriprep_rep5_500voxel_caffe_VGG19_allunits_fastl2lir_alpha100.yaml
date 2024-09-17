@@ -58,7 +58,7 @@ feature decoder dir:
 
 # Decoded features
 decoded feature dir:
-  ./data/contents_shared/ImageNetTest/derivatives/decoded_features
+  ./data/ImageNetTest/derivatives/decoded_features
 
 # Learning parameters
 alpha: 100
