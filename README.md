@@ -1,14 +1,14 @@
 # Spurious-reconstruction
 
-Demo code for Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani. 
+Demo code for Ken Shirakawa, Yoshihiro Nagano, Misato Tanaka, Shuntaro C. Aoki, Yusuke Muraki, Kei Majima, and Yukiyasu Kamitani "Spurious reconstruction from brain activity" ([arXiv](https://arxiv.org/abs/2405.10078)).
 
-# Getting Started
+## Getting Started
 
-## Instration
+### Instration
 Clone the reposibory on your local machine, using git clone by pasting the URL of this project:
 
 `git clone https://github.com/KamitaniLab/spurious_reconstruction.git`
-## Build environment
+### Build environment
 We created the environment by rye. You can install rye by [the official instruction](https://rye.astral.sh/).
 After installing rye, you can sync this repository
 ```
@@ -16,7 +16,7 @@ cd spurious_reconstruction
 rye sync
 ```
 
-## Dataset preparation
+### Dataset preparation
 We used the public available dataset: 
 - NSD
     - Raw fMRI data (including visual images and text annotation): upon request via https://forms.gle/eT4jHxaWwYUDEf2i9
@@ -37,7 +37,7 @@ We are currently preparing to share the preprocessed data and files. These files
 
 Since reproducing all of the analysis needs a huge data files (~3T storages) and some analyze take long time to finish (~ 2 weeks), we recommend use download scritps to download minimum files to reproduce a specific task such as image reconstruction, simulation analysis etc.. 
 
-If you want to reprodue the UMAP results, you can download the data by:
+If you want to reprodue the UMAP results, for example,  you can download the data by:
 
 You can running `download.py` with specific argument such as 
 ```
