@@ -20,20 +20,6 @@ cd spurious_reconstruction
 rye sync
 ```
 
-### Dataset
-We used publicly available datasets for this project. The key datasets are:
-
-- **NSD (Natural Scenes Dataset)**  
-    - Raw fMRI data (including visual images and text annotations): Available upon request via [this form](https://forms.gle/eT4jHxaWwYUDEf2i9).
-  
-- **Deep Image Reconstruction**  
-    - Raw fMRI data: Available from [OpenNeuro](https://openneuro.org/datasets/ds001506).
-    - Preprocessed fMRI data, DNN features extracted from images, and decoded DNN features: Available via [Deep Image Reconstruction@figshare](https://github.com/KamitaniLab/DeepImageReconstruction?tab=readme-ov-file#:~:text=Preprocessed%20fMRI%20data,Image%20Reconstruction%40figshare).
-    - Visual images: Available upon request via [this form](https://forms.gle/ujvA34948Xg49jdn9).
-    - Text annotations: Available from [GOD Stimuli Annotations](https://github.com/KamitaniLab/GOD_stimuli_annotations).
-
-If you want to fully reproduce the analysis, you can use these brain data and image stimuli.
-
 ## Usage
 
 ---
@@ -56,3 +42,16 @@ python ./download.py "UMAP visualization results"
 
 Each analysis directory contains additional information on how to reproduce the corresponding results. Please check the README files within each directory for specific instructions.
 
+### Original Dataset
+We used publicly available datasets for this project. The key datasets are:
+
+- **NSD (Natural Scenes Dataset)**  
+    - Raw fMRI data (including visual images and text annotations): Available upon request via [Spurious Reconstruction@figshare](https://forms.gle/eT4jHxaWwYUDEf2i9).
+  
+- **Deep Image Reconstruction**  
+    - Raw fMRI data: Available from [OpenNeuro](https://openneuro.org/datasets/ds001506).
+    - Preprocessed fMRI data, DNN features extracted from images, and decoded DNN features: Available via [Deep Image Reconstruction@figshare](https://github.com/KamitaniLab/DeepImageReconstruction?tab=readme-ov-file#:~:text=Preprocessed%20fMRI%20data,Image%20Reconstruction%40figshare).
+    - Visual images: Available upon request via [this form](https://forms.gle/ujvA34948Xg49jdn9).
+    - Text annotations: Available from [GOD Stimuli Annotations](https://github.com/KamitaniLab/GOD_stimuli_annotations).
+
+If you want to fully reproduce the analysis, you can use these brain data, image stimuli and corresponding text annotations.

@@ -4,14 +4,14 @@ This directory contains the analysis related to the simulation studies in the pa
 
 ---
 
-### Figure 8
+### Reproducing Figure 8
 To reproduce the result and plot Figure 8, run the following command from the `Spurious_reconstruction` directory:
 
 ```
 python ./analysis/2_formal-analysis/cluster_data_simulation/Figure_output_dimension_collapse.py
 ```
 
-### Figures 9B, 9D, and S3 FigB
+### Reproducing Figures 9B, 9D, and S3 FigB
 To reproduce the simulation analysis related to Figures 9B, 9D, and S3 FigB, use this command:
 ```
 python ./analysis/2_formal-analysis/cluster_data_simulation/simulation_cluster_identification.py
@@ -25,12 +25,12 @@ After downloading the results, reproduce the figures by running:
 ```
 python ./analysis/2_formal-analysis/cluster_data_simulation/Figure_simulation_cluster_identification.py
 ```
-### Figure 9E
+### Reproducing Figure 9E
 To reproduce the results for Figure 9E, use the following command:
 ```
 python ./analysis/2_formal-analysis/cluster_data_simulation/Figure_simulation_cluster_identification_simple_case.py
 ```
-### S3 FigA
+### Reproducing S3 FigA
 To reproduce the simulation analysis related to S3 FigA, use this command:
 ```
 python ./analysis/2_formal-analysis/cluster_data_simulation/simulation_cluster_identification_change_ratio.py

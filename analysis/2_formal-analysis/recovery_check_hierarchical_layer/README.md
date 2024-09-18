@@ -1,4 +1,4 @@
-# Hierarchical Layer Recovery Check Analysis
+# Recovery check analysis of each hierarchical layer 
 
 This directory contains the recovery check analysis at each hierarchical layer of deep neural networks (DNNs) in Figure 11 of the paper. You can follow the instructions below and reproduce the figures and results.
 

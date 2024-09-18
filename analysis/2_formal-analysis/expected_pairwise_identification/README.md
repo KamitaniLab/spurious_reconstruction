@@ -1,4 +1,4 @@
-# Pairwise Identification Analysis
+# Expected pairwise identification analysis
 
 This directory contains the analysis related to "expected pairwise identification accuracy" in Figure 10 of the paper. You can follow the instructions below and reproduce the figures and results.
 
