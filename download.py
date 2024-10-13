@@ -58,7 +58,7 @@ def main(cfg):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--filelist', default='files.json')
+    parser.add_argument('--filelist', default='download_files.json')
     parser.add_argument('target')
 
     cfg = parser.parse_args()

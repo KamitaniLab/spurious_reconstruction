@@ -171,7 +171,7 @@ def draw_group_image_set(condition_list, background_color = (255, 255, 255),
 
 
 # %%
-save_dir = './results/assets/fig02'
+save_dir = './results_dl/assets/fig02'
 os.makedirs(save_dir, exist_ok=True)
 
 
@@ -196,7 +196,7 @@ recon_path_dict = {
     #"BrainDiffuser": "./results/reconstruction/NSD-stimuli/derivatives/reconstruction/...
     
     
-    "iCNN": "./results/reconstruction/NSD-stimuli/derivatives/reconstruction/icnn/recon_bdpy_icnn_image_gd_dist_vgg19_relu7generator_gd_scaling_feature_std_train_mean_center_1000iter/decoded/NSD-stimuli/decoded_features"
+    "iCNN": "./results_dl/reconstruction/NSD-stimuli/derivatives/reconstruction/icnn/recon_bdpy_icnn_image_gd_dist_vgg19_relu7generator_gd_scaling_feature_std_train_mean_center_1000iter/decoded/NSD-stimuli/decoded_features"
     }
 
 

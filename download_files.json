@@ -1,0 +1,152 @@
+{
+
+    "image reconstruction results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "41ac287e5e51d52233d87704961907e2",
+             "name": "results-reconstruction.zip",
+             "url": "https://figshare.com/ndownloader/files/49414516",
+             "postproc": [{"name": "unzip", "destination": "./results"}]}]},
+
+    "UMAP visualization results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "8c7e5b1be5226299df69eb0c0e99d150",
+             "name": "results-res_umap.zip.01",
+             "url": "https://figshare.com/ndownloader/files/49498512",
+            "postproc": [{"name": "unzip", "destination": "./results_dl"}]},
+
+            {"md5sum": "6ba8edd0a375c47cabe33aab81452cf1",
+             "name": "results-res_umap.zip.02",
+             "url": "https://figshare.com/ndownloader/files/49501998",
+            "postproc": [{"name": "unzip", "destination": "./results"}]}
+            
+            ]
+            
+            
+            
+            },
+
+    "zero-shot identification results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "c740b087a0736c131172acec9e2510d4",
+             "name": "results-zero-shot_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414528",
+             "postproc": [{"name": "unzip", "destination": "./results"}]}]},
+
+    "hold-out results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "28e5b03e423bcce3a4166945f9d716c9",
+             "name": "results-cluster_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414489",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+            {"md5sum": "f65d41cee676b748106d07a9f2b71c2f",
+             "name": "results-pairwise_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414513",
+            "postproc": [{"name": "unzip", "destination": "./results"}]}
+             
+             ]},
+    "recovery_check results": {
+                "zip": false,
+                "save_in": "./",
+                "files": [
+                    {"md5sum": "01d3a83f883e209433de40f868fdc5bb",
+                     "name": "results-recovery_check.zip",
+                     "url": "https://figshare.com/ndownloader/files/49414519"}],
+                    "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+    "simulation results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "1c3efbf7a799e572527556ac2942f487",
+             "name": "results-simulation_cluster_identification_dim.zip",
+             "url": "https://figshare.com/ndownloader/files/49414522",
+            "postproc": [{"name": "unzip", "destination": "./results_dl"}]},
+
+            {"md5sum": "2b132281081e63ea47425eaf7c2e79af",
+             "name": "results-simulation_cluster_identification_ratio.zip",
+             "url": "https://figshare.com/ndownloader/files/49414525",
+            "postproc": [{"name": "unzip", "destination": "./results"}]}
+             
+             ]},
+    
+
+    "single layer recovery check results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "01d3a83f883e209433de40f868fdc5bb",
+                "name": "results-recovery_check.zip",
+                "url": "https://figshare.com/ndownloader/files/49414519",
+                "postproc": [{"name": "unzip", "destination": "./results"}]}]},
+
+
+
+    "all results": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "41ac287e5e51d52233d87704961907e2",
+             "name": "results-reconstruction.zip",
+             "url": "https://figshare.com/ndownloader/files/49414516",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+             {"name": "results-res_umap.zip",
+              "md5sum": ["8c7e5b1be5226299df69eb0c0e99d150","6ba8edd0a375c47cabe33aab81452cf1"],
+             "url": ["https://figshare.com/ndownloader/files/49498512","https://figshare.com/ndownloader/files/49501998"],
+             "postproc": [{"name": "merge"},
+                        {"name": "unzip", "destination": "./results"}]},
+
+             {"md5sum": "c740b087a0736c131172acec9e2510d4",
+             "name": "results-zero-shot_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414528",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+             {"md5sum": "28e5b03e423bcce3a4166945f9d716c9",
+             "name": "results-cluster_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414489",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+            {"md5sum": "f65d41cee676b748106d07a9f2b71c2f",
+             "name": "results-pairwise_identification.zip",
+             "url": "https://figshare.com/ndownloader/files/49414513",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+             {"md5sum": "01d3a83f883e209433de40f868fdc5bb",
+             "name": "results-recovery_check.zip",
+             "url": "https://figshare.com/ndownloader/files/49414519",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+             {"md5sum": "1c3efbf7a799e572527556ac2942f487",
+             "name": "results-simulation_cluster_identification_dim.zip",
+             "url": "https://figshare.com/ndownloader/files/49414522",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+            {"md5sum": "2b132281081e63ea47425eaf7c2e79af",
+             "name": "results-simulation_cluster_identification_ratio.zip",
+             "url": "https://figshare.com/ndownloader/files/49414525",
+            "postproc": [{"name": "unzip", "destination": "./results"}]},
+
+            {"md5sum": "01d3a83f883e209433de40f868fdc5bb",
+                "name": "results-recovery_check.zip",
+                "url": "https://figshare.com/ndownloader/files/49414519",
+            "postproc": [{"name": "unzip", "destination": "./results"}]}
+
+            ]
+        }
+
+
+
+
+
+
+            
+}
