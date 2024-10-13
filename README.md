@@ -24,7 +24,7 @@ rye sync
 
 ---
 
-We are currently preparing to share the preprocessed data and files. These files will be made available on Figshare at [this DOI](https://doi.org/10.6084/m9.figshare.27013342).
+We are currently preparing to share the preprocessed data and files. These files will be made available on Figshare at [this URL](https://figshare.com/articles/dataset/Spurious_reconstruction_from_brain_activity/27013342).
 
 Reproducing the full analysis requires a large amount of data (approximately 3TB) and some analyses take considerable time to complete (up to ~2 weeks). Therefore, we recommend downloading only the minimum necessary files to reproduce specific analysis, such as image reconstruction, UMAP results or simulation analysis.
 
@@ -38,9 +38,10 @@ Alternatively, you can directly download the results of UMAP analysis with:
 ```
 python ./download.py "UMAP visualization results"
 ```
-
+Note: At the moment, only the download of **result data** is supported. Please wait a little longer for the availability of **analysis data**.
 
 Each analysis directory contains additional information on how to reproduce the corresponding results. Please check the README files within each directory for specific instructions.
+
 
 ### Original Dataset
 We used publicly available datasets for this project. The key datasets are:
