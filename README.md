@@ -40,10 +40,9 @@ python ./download.py "UMAP visualization results"
 ```
 Note: At the moment, the download of **analysis data** is supported for the UMAP visualization
 analysis, the image reconstruction analysis and the single layer recovery check analysis.
-The `hold-out analysis` target is still incomplete (see
-`./analysis/1_case_study/feature-decoding/README.md`). Note also that the **visual stimuli**
-(`./data/<dataset>/source`) and the **fMRI data** are not part of the Figshare deposit; they
-are available upon request as described in the Original Dataset section below.
+Note also that the **visual stimuli** (`./data/<dataset>/source`) and the **fMRI data** are not
+part of the Figshare deposit; they are available upon request as described in the Original
+Dataset section below.
 
 Each analysis directory contains additional information on how to reproduce the corresponding results. Please check the README files within each directory for specific instructions.
 

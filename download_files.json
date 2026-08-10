@@ -122,29 +122,6 @@
              "url": "https://ndownloader.figshare.com/files/49414528",
              "postproc": [{"name": "unzip", "destination": "./"}]}]},
 
-    "hold-out analysis": {
-        "zip": false,
-        "save_in": "./",
-        "comment": [
-            "INCOMPLETE: these are the only hold-out files currently available on figshare.",
-            "Both featdec_cv_eval_cluster_classification.py and featdec_cv_eval_pairwise_identification.py",
-            "additionally read, for the holdout and the naive split:",
-            "  data/NSD-stimuli/derivatives/feature_decoding_cv/<analysis name>_scaled/  (decoded features)",
-            "  data/NSD-stimuli/derivatives/feature_decoding_cv/<analysis name>/**/model/{y_mean,y_norm}.mat",
-            "and foldwise_ave_feature is currently uploaded for the holdout split only.",
-            "Running featdec_cv_fastl2lir_predict.py instead needs the full trained decoders",
-            "(model/W, model/b, x_mean, x_norm), and featdec_cv_fastl2lir_train.py needs the fMRI data."],
-        "files": [
-            {"md5sum": "4c7ef15e127eb8d0c86d5c6af2284e90",
-             "name": "data-NSD-stimuli-derivatives-feature_decoding_cv-foldwise_ave_feature.zip",
-             "url": "https://ndownloader.figshare.com/files/49958181",
-             "postproc": [{"name": "unzip", "destination": "./"}]},
-
-            {"md5sum": "c02bc9396fd3b947ba86e08c46de914b",
-             "name": "data-NSD-stimuli-derivatives-features-pytorch-brain_diffuser_versatile_diffusion.zip",
-             "url": "https://ndownloader.figshare.com/files/49794120",
-             "postproc": [{"name": "unzip", "destination": "./"}]}]},
-
     "hold-out results": {
         "zip": false,
         "save_in": "./",

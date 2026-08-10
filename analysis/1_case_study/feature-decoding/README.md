@@ -27,12 +27,15 @@ python download.py "image reconstruction analysis"
 #### 3. Evaluation (Figure 5)
 To reproduce the zero-shot identification analysis in Figure 5, you may need to download files, especially you download the decoded features.
 ```
-python download.py "hold-out analysis"
+python download.py "image reconstruction analysis"
 ```
 Then, the zero-shot identification can be performed by:
 ```
-python ./analysis/1_case_study/feature-decoding/featdec_eval_zero-shot_indentification.py
+python ./analysis/1_case_study/feature-decoding/featdec_eval_zero-shot_identification.py <configuration file>
 ```
+Note: this script also needs the true DNN features of the training and test stimuli and the
+fMRI data of the training samples. The fMRI data is not part of the Figshare deposit, so we
+recommend downloading the precomputed results below instead.
 Since this analysis also takes much time and needs heavy resources, you can download the results:
 ```
 python download.py "zero-shot identification results"
@@ -49,16 +52,10 @@ python ./analysis/1_case_study/feature-decoding/Figure_zero_shot_sample_identifi
 #### 2. Decoder test
 ```rye run python ./analysis/1_case_study/feature-decoding/featdec_cv_fastl2lir_predict.py ./analysis/1_case_study/config/umap_space_holdout_split_cv_nsd-betasfithrfGLMdenoiseRR_testshared1000_trainnoave_testave_fastl2lir_alpha_100000_versatile_diffusion.yaml``` 
 
-Since this analysis takes time, you can download the decoding results by:
-```
-python download.py "hold-out analysis"
-```
-Note: this target is currently incomplete. It provides the fold-wise averaged features of the
-hold-out split and the true Versatile Diffusion features, but the cross-validated decoded
-features (`feature_decoding_cv/<analysis name>_scaled`) and the decoder normalization
-parameters (`feature_decoding_cv/<analysis name>/**/model/{y_mean,y_norm}.mat`) of the
-hold-out and naive splits are not on figshare yet, so the two evaluation scripts below cannot
-be run from the downloaded files alone.
+Note: the cross-validated decoders and their decoded features are not distributed, because the
+trained decoders of a single split are about 569 GB. Please run the two steps above to
+reproduce them. If you only need the numbers behind Figure 6, download the precomputed results
+with `python download.py "hold-out results"`.
 #### 3. Evaluation (Related to Figure 6)
 Evaluate the performance for cluster identification using:
 ```
