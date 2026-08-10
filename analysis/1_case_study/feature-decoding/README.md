@@ -53,6 +53,12 @@ Since this analysis takes time, you can download the decoding results by:
 ```
 python download.py "hold-out analysis"
 ```
+Note: this target is currently incomplete. It provides the fold-wise averaged features of the
+hold-out split and the true Versatile Diffusion features, but the cross-validated decoded
+features (`feature_decoding_cv/<analysis name>_scaled`) and the decoder normalization
+parameters (`feature_decoding_cv/<analysis name>/**/model/{y_mean,y_norm}.mat`) of the
+hold-out and naive splits are not on figshare yet, so the two evaluation scripts below cannot
+be run from the downloaded files alone.
 #### 3. Evaluation (Related to Figure 6)
 Evaluate the performance for cluster identification using:
 ```

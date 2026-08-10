@@ -1,5 +1,69 @@
 {
 
+    "image reconstruction analysis": {
+        "zip": false,
+        "save_in": "./",
+        "files": [
+            {"md5sum": "44402fee8de77c4c74993546c6bee9f7",
+             "name": "data-models_shared.zip",
+             "url": "https://ndownloader.figshare.com/files/50378373",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "9d0614a6e7fab9246017bc934b79eb48",
+             "name": "data-ImageNetTest-derivatives-decoded_features-deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100-decoded_features-caffe-VGG_ILSVRC_19_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49537287",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "dae20bbd2e368a2f7c7cc1347cc5d35e",
+             "name": "data-ImageNetTest-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49538064",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "22004a10019f0a2f7bcec6fbfc859b3d",
+             "name": "data-ArtificialShapes-derivatives-decoded_features-deeprecon_fmriprep_rep5_500voxel_allunits_fastl2lir_alpha100-decoded_features-caffe-VGG_ILSVRC_19_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49536078",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "039590d3dafb7b7631aa0514626549ac",
+             "name": "data-ArtificialShapes-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49536951",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "4f53f5eb9342220e38e3fcb6929ee7c0",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv1_1.zip",
+             "url": "https://ndownloader.figshare.com/files/49842690",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "1805700190a01469b806534d1c23b000",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv1_2.zip",
+             "url": "https://ndownloader.figshare.com/files/49887093",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "c6a9b28276fb43b5edaafa7afde952fc",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv2_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49887474",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "0ca1fef28a9ebdce4e812a700269ec6a",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv3_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937349",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "79169753f0b0db4259e10d05f77572a3",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv4_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937727",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "1bc97877e72bd2e4303cea38c5be51bb",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv5_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937841",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "fe5d04dbc12ecbb622865d8dd0d4a462",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-fc_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937859",
+             "postproc": [{"name": "unzip", "destination": "./"}]}]},
+
     "image reconstruction results": {
         "zip": false,
         "save_in": "./",
@@ -58,6 +122,29 @@
              "url": "https://ndownloader.figshare.com/files/49414528",
              "postproc": [{"name": "unzip", "destination": "./"}]}]},
 
+    "hold-out analysis": {
+        "zip": false,
+        "save_in": "./",
+        "comment": [
+            "INCOMPLETE: these are the only hold-out files currently available on figshare.",
+            "Both featdec_cv_eval_cluster_classification.py and featdec_cv_eval_pairwise_identification.py",
+            "additionally read, for the holdout and the naive split:",
+            "  data/NSD-stimuli/derivatives/feature_decoding_cv/<analysis name>_scaled/  (decoded features)",
+            "  data/NSD-stimuli/derivatives/feature_decoding_cv/<analysis name>/**/model/{y_mean,y_norm}.mat",
+            "and foldwise_ave_feature is currently uploaded for the holdout split only.",
+            "Running featdec_cv_fastl2lir_predict.py instead needs the full trained decoders",
+            "(model/W, model/b, x_mean, x_norm), and featdec_cv_fastl2lir_train.py needs the fMRI data."],
+        "files": [
+            {"md5sum": "4c7ef15e127eb8d0c86d5c6af2284e90",
+             "name": "data-NSD-stimuli-derivatives-feature_decoding_cv-foldwise_ave_feature.zip",
+             "url": "https://ndownloader.figshare.com/files/49958181",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "c02bc9396fd3b947ba86e08c46de914b",
+             "name": "data-NSD-stimuli-derivatives-features-pytorch-brain_diffuser_versatile_diffusion.zip",
+             "url": "https://ndownloader.figshare.com/files/49794120",
+             "postproc": [{"name": "unzip", "destination": "./"}]}]},
+
     "hold-out results": {
         "zip": false,
         "save_in": "./",
@@ -95,6 +182,23 @@
              "url": "https://ndownloader.figshare.com/files/49414525",
              "postproc": [{"name": "unzip", "destination": "./"}]}]},
 
+
+    "single layer recovery check analysis": {
+        "zip": false,
+        "save_in": "./",
+        "comment": [
+            "The recovery check scripts also read the stimulus images in data/ImageNetTest/source,",
+            "which are available upon request (see the top-level README)."],
+        "files": [
+            {"md5sum": "44402fee8de77c4c74993546c6bee9f7",
+             "name": "data-models_shared.zip",
+             "url": "https://ndownloader.figshare.com/files/50378373",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "dae20bbd2e368a2f7c7cc1347cc5d35e",
+             "name": "data-ImageNetTest-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49538064",
+             "postproc": [{"name": "unzip", "destination": "./"}]}]},
 
     "single layer recovery check results": {
         "zip": false,

@@ -8,6 +8,14 @@ Before running these scripts, you will download the necessary feature files befo
 ```
 python ./download.py "single layer recovery check analysis"
 ```
+
+This downloads `data-models_shared.zip` (VGG19 encoder and relu7 generator parameters, 4.4 GB)
+and `data-ImageNetTest-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip` (true VGG19
+features of the Deeprecon test stimuli, 2.7 GB) into `./data`.
+
+Note: these scripts recover images from the features of the presented images, so they also
+need the visual stimuli in `./data/ImageNetTest/source`, which are available upon request
+only. See the top-level README.
 ## Three Types of Image Recovery Analysis
 
 We provide three types of image recovery analysis. You can choose from the following methods based on the specific analysis you want to check.

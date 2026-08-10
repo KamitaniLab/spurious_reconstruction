@@ -11,6 +11,22 @@ To run the reconstruction scripts, you need to prepare sesveral files, including
 ```
 python ./download.py "image reconstruction analysis"
 ```
+
+This downloads the following files (approximately 62 GB in total) into `./data`:
+
+| File | Contents | Size |
+|:--|:--|--:|
+| `data-models_shared.zip` | VGG19 encoder and caffenet relu7 generator parameters | 4.4 GB |
+| `data-ImageNetTest-derivatives-decoded_features-...-caffe-VGG_ILSVRC_19_layers.zip` | Decoded VGG19 features of the Deeprecon test stimuli (Figure 2) | 2.5 GB |
+| `data-ImageNetTest-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip` | True VGG19 features of the Deeprecon test stimuli | 2.7 GB |
+| `data-ArtificialShapes-derivatives-decoded_features-...-caffe-VGG_ILSVRC_19_layers.zip` | Decoded VGG19 features of the artificial shapes (Figure 7) | 2.0 GB |
+| `data-ArtificialShapes-derivatives-features-caffe-VGG_ILSVRC_19_layers.zip` | True VGG19 features of the artificial shapes | 0.7 GB |
+| `data-NSD-stimuli-derivatives-decoded_features-...-caffe-VGG_ILSVRC_19_layers-<layer>.zip` (7 files) | Decoded VGG19 features of the NSD test stimuli (Figure 2) | 49.4 GB |
+
+Note: the reconstruction itself runs with these files, but comparing the reconstructions
+with the presented images (`evaluation.true_image`, i.e. `./data/<dataset>/source`) requires
+the visual stimuli, which are available upon request only. See the top-level README.
+
 Optionaly, you can prepraed decoded feature, conducting feature decoding analysis at `feature-decoding directory`.
 
 ### Usage
