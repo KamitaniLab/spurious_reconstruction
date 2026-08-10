@@ -39,7 +39,8 @@ Alternatively, you can directly download the results of UMAP analysis with:
 python ./download.py "UMAP visualization results"
 ```
 Note: At the moment, the download of **analysis data** is supported for the UMAP visualization
-analysis, the image reconstruction analysis and the single layer recovery check analysis.
+analysis, the image reconstruction analysis, the zero-shot analysis and the single layer
+recovery check analysis.
 Note also that the **visual stimuli** (`./data/<dataset>/source`) and the **fMRI data** are not
 part of the Figshare deposit; they are available upon request as described in the Original
 Dataset section below.

@@ -113,6 +113,125 @@
              "postproc": [{"name": "merge"},
                           {"name": "unzip", "destination": "./"}]}]},
 
+    "zero-shot analysis": {
+        "zip": false,
+        "save_in": "./",
+        "comment": [
+            "featdec_eval_zero-shot_identification.py also reads the fMRI data listed under",
+            "'training fmri' in the configuration file, which is not part of the figshare deposit.",
+            "The decoded Versatile Diffusion features of the NSD stimuli",
+            "(decoded_features/nsd-betasfithrfGLMdenoiseRR_trainnoave_testave_fastl2lir_alpha_100000)",
+            "are not on figshare yet either, so only the VGG19 half of Figure 5 can be reproduced."],
+        "files": [
+            {"md5sum": "f698107a246123b1d2907bb543d3dff3",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv1_1.zip",
+             "url": "https://ndownloader.figshare.com/files/49828950",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "4cd86bda15f7f9aa119a66f60526e7c4",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv1_2.zip",
+             "url": "https://ndownloader.figshare.com/files/49828560",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "9b4a1471de2bb2ba790e7163f56e5f1a",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv2_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49819041",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "67dc83dc7f3702f3942e517460c6d960",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv3_1.zip",
+             "url": "https://ndownloader.figshare.com/files/49818618",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "bf650d2b7ab18cf389558f6c2bac4074",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv3_2.zip",
+             "url": "https://ndownloader.figshare.com/files/49818672",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv3_3.zip",
+             "md5sum": ["8b2cea8aeacc7fff8094dbf504a9d9ff", "382e7fb25a8c8dc6979dc9475db42590"],
+             "url": ["https://ndownloader.figshare.com/files/49829226",
+                     "https://ndownloader.figshare.com/files/49829556"],
+             "postproc": [{"name": "merge"},
+                          {"name": "unzip", "destination": "./"}]},
+
+            {"name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv3_4.zip",
+             "md5sum": ["c5afb217df6edb70c704e10ae7bcae03", "63239e095a8a834610db2bd7b7d5bad0"],
+             "url": ["https://ndownloader.figshare.com/files/49820331",
+                     "https://ndownloader.figshare.com/files/49820508"],
+             "postproc": [{"name": "merge"},
+                          {"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "08707af7fea7b428ae86c2ebe101d1f6",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv4_1.zip",
+             "url": "https://ndownloader.figshare.com/files/49817121",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "1b536797f6959ba04f550c4b218a23d1",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv4_2.zip",
+             "url": "https://ndownloader.figshare.com/files/49817376",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "beab5c0709754bb68fe6257926ca2fea",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv4_3.zip",
+             "url": "https://ndownloader.figshare.com/files/49817571",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "e06a1e1dee962f3cfa166b16f16f765d",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv4_4.zip",
+             "url": "https://ndownloader.figshare.com/files/49818189",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "c8b292678ba1879ad287998574b6b08e",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-conv5_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49797186",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "37007ede60b18f6c15404087657107da",
+             "name": "data-NSD-stimuli-derivatives-features-caffe-VGG_ILSVRC_19_layers-fc_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49796922",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "c02bc9396fd3b947ba86e08c46de914b",
+             "name": "data-NSD-stimuli-derivatives-features-pytorch-brain_diffuser_versatile_diffusion.zip",
+             "url": "https://ndownloader.figshare.com/files/49794120",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "4f53f5eb9342220e38e3fcb6929ee7c0",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv1_1.zip",
+             "url": "https://ndownloader.figshare.com/files/49842690",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "1805700190a01469b806534d1c23b000",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv1_2.zip",
+             "url": "https://ndownloader.figshare.com/files/49887093",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "c6a9b28276fb43b5edaafa7afde952fc",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv2_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49887474",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "0ca1fef28a9ebdce4e812a700269ec6a",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv3_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937349",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "79169753f0b0db4259e10d05f77572a3",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv4_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937727",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "1bc97877e72bd2e4303cea38c5be51bb",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-conv5_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937841",
+             "postproc": [{"name": "unzip", "destination": "./"}]},
+
+            {"md5sum": "fe5d04dbc12ecbb622865d8dd0d4a462",
+             "name": "data-NSD-stimuli-derivatives-decoded_features-caffe-VGG_ILSVRC_19_layers-fc_layers.zip",
+             "url": "https://ndownloader.figshare.com/files/49937859",
+             "postproc": [{"name": "unzip", "destination": "./"}]}]},
+
     "zero-shot identification results": {
         "zip": false,
         "save_in": "./",

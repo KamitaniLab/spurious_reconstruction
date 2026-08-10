@@ -27,15 +27,19 @@ python download.py "image reconstruction analysis"
 #### 3. Evaluation (Figure 5)
 To reproduce the zero-shot identification analysis in Figure 5, you may need to download files, especially you download the decoded features.
 ```
-python download.py "image reconstruction analysis"
+python download.py "zero-shot analysis"
 ```
+This downloads the true and the decoded VGG19 features of the NSD stimuli and the true
+Versatile Diffusion features (approximately 242 GB in total).
+
 Then, the zero-shot identification can be performed by:
 ```
 python ./analysis/1_case_study/feature-decoding/featdec_eval_zero-shot_identification.py <configuration file>
 ```
-Note: this script also needs the true DNN features of the training and test stimuli and the
-fMRI data of the training samples. The fMRI data is not part of the Figshare deposit, so we
-recommend downloading the precomputed results below instead.
+Note: this script also reads the fMRI data listed under `training fmri` in the configuration
+file, which is not part of the Figshare deposit, and the decoded Versatile Diffusion features
+have not been deposited either. Only the VGG19 half of Figure 5 can currently be reproduced
+from the downloaded files.
 Since this analysis also takes much time and needs heavy resources, you can download the results:
 ```
 python download.py "zero-shot identification results"
