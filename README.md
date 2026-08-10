@@ -38,7 +38,7 @@ Alternatively, you can directly download the results of UMAP analysis with:
 ```
 python ./download.py "UMAP visualization results"
 ```
-Note: At the moment, only the download of **result data** is supported. Please wait a little longer for the availability of **analysis data**.
+Note: At the moment, the download of **analysis data** is supported only for the UMAP visualization analysis. Please wait a little longer for the availability of the **analysis data** of the other analyses.
 
 Each analysis directory contains additional information on how to reproduce the corresponding results. Please check the README files within each directory for specific instructions.
 

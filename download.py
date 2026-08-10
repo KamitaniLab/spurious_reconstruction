@@ -18,8 +18,10 @@ def main(cfg):
     target = filelist[cfg.target]
 
     for fl in target['files']:
-        output = os.path.join(target['save_in'], fl['name'])
-        os.makedirs(target['save_in'], exist_ok=True)
+        # 'save_in' can be overridden per file
+        save_in = fl.get('save_in', target['save_in'])
+        output = os.path.join(save_in, fl['name'])
+        os.makedirs(save_in, exist_ok=True)
 
         # Downloading
         if not os.path.exists(output):
